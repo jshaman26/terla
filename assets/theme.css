@@ -27,7 +27,7 @@
     --bs-gray-700: #677788;
     --bs-gray-800: #71869d;
     --bs-gray-900: #1e2022;
-    --bs-primary: #377dff;
+    --bs-primary: #C55530;
     --bs-secondary: #71869d;
     --bs-success: #00c9a7;
     --bs-info: #09a5be;
@@ -35,7 +35,7 @@
     --bs-danger: #ed4c78;
     --bs-light: #f7faff;
     --bs-dark: #21325b;
-    --bs-primary-rgb: 55,125,255;
+    --bs-primary-rgb: 207, 92, 54;
     --bs-secondary-rgb: 113,134,157;
     --bs-success-rgb: 0,201,167;
     --bs-info-rgb: 9,165,190;
@@ -49,7 +49,7 @@
     --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --bs-body-font-family: Inter,sans-serif;
+    --bs-body-font-family: Poppins,sans-serif;
     --bs-body-font-size: 1rem;
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
@@ -3311,8 +3311,8 @@ textarea.form-control-lg {
 
 .btn-primary {
     color: #fff;
-    background-color: #377dff;
-    border-color: #377dff
+    background-color: #C55530;
+    border-color: #C55530
 }
 
 .btn-primary:hover {
@@ -29422,3 +29422,21 @@ div.code-toolbar>.prism-light+.toolbar a:focus,div.code-toolbar>.prism-light+.to
     max-height: 40rem;
     overflow-y: auto
 }
+
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  
+  .whatsapp-icon {
+    margin-top:13px;
+  }
