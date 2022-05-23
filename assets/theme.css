@@ -22972,8 +22972,8 @@ input[type=number] {
 
 .navbar-brand-logo {
     width: 100%;
-    min-width: 7.5rem;
-    max-width: 7.5rem
+    min-width: 9rem;
+    max-width: 9rem
 }
 
 .navbar-brand-collapsed,.navbar-brand-on-scroll {
