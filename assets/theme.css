@@ -23015,7 +23015,7 @@ input[type=number] {
     height: auto;
     width: 100%;
  
-    max-width:150px
+    max-width:140px
 }
 
 .navbar-brand-collapsed,.navbar-brand-on-scroll {
@@ -23139,7 +23139,7 @@ input[type=number] {
 }
 
 .navbar .navbar-nav .nav-link {
-    padding: 1rem .75rem
+    padding: 1rem 0.25rem
 }
 
 .navbar .nav-item:hover>.nav-link {
