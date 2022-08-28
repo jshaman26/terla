@@ -85,7 +85,13 @@ hr {
 hr:not([size]) {
     height: .0625rem
 }
-
+@media (max-width: 992px)  {
+    #header {
+        grid-template-areas: 'navigation heading  icons'!important;
+        grid-template-columns: auto auto auto!important;
+    }
+    
+} 
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
     margin-top: 0;
     margin-bottom: .5rem;
@@ -4379,23 +4385,17 @@ textarea.form-control-lg {
     display: block
 }
 #header{
+  display: grid;
+  align-items: center;
+  padding: 20px 5%;
+  grid-template-areas: 'heading navigation icons';
+    grid-template-columns: auto auto 1fr;
+    column-gap: 2rem;
     border-bottom: 0.1rem solid #8080801c;
-
-
 }
 .navbar {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
- 
+    display: block;
+    grid-area: navigation;
 
 }
 
@@ -4411,11 +4411,11 @@ textarea.form-control-lg {
 }
 
 .navbar-brand {
-    padding-top: .3125rem;
-    padding-bottom: .3125rem;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-    white-space: nowrap;
+    display: inline-block;
+    padding: 0.75rem;
+    text-decoration: none;
+    word-break: break-word;
+    grid-area: heading;
 
 }
 
@@ -4645,6 +4645,7 @@ textarea.form-control-lg {
         -ms-flex-pack: start;
         justify-content: flex-start
     }
+    
 
     .navbar-expand-lg .navbar-nav {
         -ms-flex-direction: row;
@@ -4923,7 +4924,26 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible
 }
+.spanes{
+    font-size:15px; 
+    color:rgb(8, 0, 0) ;
+    opacity: 0.75; 
+}
+.spanes.active{
+color:#000;
+text-decoration: underline;
 
+}
+.nav-link.active{
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+.spanes:hover{
+    color:#000;
+    text-decoration: underline;
+    
+    }
 .navbar-light .navbar-brand {
     color: #677788
 }
@@ -6247,7 +6267,8 @@ textarea.form-control-lg {
 
 .modal-title {
     margin-bottom: 0;
-    line-height: 1.5
+    line-height: 1.5;
+    color: #080000BF
 }
 
 .modal-body {
@@ -22015,7 +22036,7 @@ input[type=number] {
     opacity: 1
 }
 
-.icon {
+/* .icon {
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-negative: 0;
@@ -22028,7 +22049,7 @@ input[type=number] {
     width: 3.125rem;
     height: 3.125rem;
     border-radius: .3125rem
-}
+} */
 
 .icon-circle {
     border-radius: 50%
@@ -22958,7 +22979,7 @@ input[type=number] {
 }
 
 .navbar {
-    display: flex;
+    display: block;
     z-index: 99
 }
 
@@ -22989,16 +23010,12 @@ input[type=number] {
     background-color: #21325b
 }
 
-.navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0
-}
 
 .navbar-brand-logo {
     height: auto;
     width: 100%;
-    padding: 0.75rem;
-    max-width:175px
+ 
+    max-width:160px
 }
 
 .navbar-brand-collapsed,.navbar-brand-on-scroll {
@@ -23786,7 +23803,12 @@ input[type=number] {
     .navbar-expand-md .nav-item:not(:last-child) {
         margin-right: .5rem
     }
-
+.nav-item{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
     .navbar-expand-md .nav-item .nav-item {
         margin-right: 0
     }
@@ -29444,13 +29466,70 @@ div.code-toolbar>.prism-light+.toolbar a:focus,div.code-toolbar>.prism-light+.to
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #1e2022
+    color: #1e2022;
+    display: flex;
+    align-items: center;
+    line-height: calc(1 + 0.3 / 1.0);
+  
+    text-decoration: none;
 }
 
 .card-nav-tab-content-height .tab-pane {
     max-height: 40rem;
     overflow-y: auto
 }
+.header__icons {
+    display: flex;
+    grid-area: icons;
+    justify-self: end;
+  }
+  
+  .header__icon:not(.header__icon--summary),
+  .header__icon span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header__icon {
+    color: rgb(8,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header__icon span {
+    height: 100%;
+  }
+  
+  .header__icon::after {
+    content: none;
+  }
+  
+  .header__icon:hover .icon,
+  .modal__close-button:hover .icon {
+    transform: scale(1.07);
+  }
+  
+  .header__icon .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: none;
+    vertical-align: middle;
+  }
+  
+  .header__icon,
+  .header__icon--cart .icon {
+    height: 3.4rem;
+    width: 3.4rem;
+    padding: 0;
+  }
+  
+  .header__icon--cart {
+    position: relative;
+    margin-right: -1.2rem;
+  }
+  
 
 .whatsapp {
     position:fixed;
